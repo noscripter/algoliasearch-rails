@@ -7,7 +7,7 @@ gem 'rubysl', '~> 2.0', :platform => :rbx
 group :test do
   gem 'rspec', '>= 2.5.0', '< 3.0'
   if defined?(RUBY_VERSION) && RUBY_VERSION == "1.8.7"
-    gem 'rails', '>= 3.2.0', '< 4.0'
+    gem 'rails', '~> 5.0'
     gem 'i18n', '< 0.7'
     gem 'highline', '< 1.7'
     gem 'addressable', '< 2.4.0'
@@ -16,8 +16,8 @@ group :test do
   end
   gem 'sqlite3', :platform => [:rbx, :ruby]
   gem 'jdbc-sqlite3', :platform => :jruby
-  gem 'activerecord-jdbc-adapter', :platform => :jruby
-  gem 'activerecord-jdbcsqlite3-adapter', :platform => :jruby
+  gem 'activerecord-jdbc-adapter', '>= 1.3.16', :platform => :jruby
+  gem 'activerecord-jdbcsqlite3-adapter', '>= 1.3.16', :platform => :jruby
   gem 'autotest'
   gem 'autotest-fsevent', '~> 0.2.10'
   gem 'redgreen'
@@ -26,12 +26,12 @@ group :test do
 end
 
 group :development do
-  gem 'travis'
+  gem 'travis', '>= 1.7.7'
   gem 'rake', '~> 10.1.0'
   gem 'rdoc'
 end
 
 group :test, :development do
   gem 'will_paginate', '>= 2.3.15'
-  gem 'kaminari'
+  gem 'kaminari', '>= 0.16.3'
 end
