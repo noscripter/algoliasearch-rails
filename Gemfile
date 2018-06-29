@@ -26,7 +26,7 @@ group :test do
 end
 
 group :development do
-  gem 'travis'
+  gem 'travis', '>= 1.7.7'
   gem 'rake', '~> 10.1.0'
   gem 'rdoc'
 end
