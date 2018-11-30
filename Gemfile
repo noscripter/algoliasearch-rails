@@ -7,7 +7,7 @@ gem 'rubysl', '~> 2.0', :platform => :rbx
 group :test do
   gem 'rspec', '>= 2.5.0', '< 3.0'
   if defined?(RUBY_VERSION) && RUBY_VERSION == "1.8.7"
-    gem 'rails', '>= 3.2.0', '< 4.0'
+    gem 'rails', '~> 4.2', '>= 4.2.11'
     gem 'i18n', '< 0.7'
     gem 'highline', '< 1.7'
     gem 'addressable', '< 2.4.0'
